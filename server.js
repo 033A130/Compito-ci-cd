@@ -85,4 +85,9 @@ const server = app.listen(PORT, () => {
   console.log(`Server in ascolto sulla porta ${PORT}`);
 });
 
-module.exports = { app, server }; // Esportiamo sia app che server
+// Funzione per chiudere il server
+const closeServer = () => {
+  server.close();
+};
+
+module.exports = { app, closeServer }; // Esportiamo app e closeServer
