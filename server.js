@@ -81,6 +81,8 @@ app.get("/api/libri/:codice/decrementa", (req, res) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server in ascolto sulla porta ${PORT}`);
 });
+
+module.exports = { app, server }; // Esportiamo sia app che server
